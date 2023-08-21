@@ -1,214 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- <link href="styles.css" rel="stylesheet"> -->
-<style>
-
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap');
-
-
-body {
-  font-family: 'Barlow', sans-serif;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.business-card {
-  width: 330px;
-  height: 440px;
-  perspective: 1000px;
-  /* cursor: pointer; */
-}
-
-.card {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-}
-
-.card-front,
-.card-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
-  /* padding: 20px; */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-.detail-position {
-  padding-top: 10px;
-  font-size: 1.7rem;
-  /* font-weight: 600; */
-  margin-bottom: 5px;
-}
-
-.card-front-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-front-footer-text {
-  font-size: 1rem;
-}
-
-.card-front {
-  background-color: #3498dba1;
-  color: white;
-  transform: rotateY(0deg);
-}
-
-.card-front > * {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 10px;
-}
-
-.profile-picture {
-  max-width: 150px;
-  border: 4px solid #fff;
-  border-radius: 50%;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.card-front-top {
-  border-radius: 8px 8px 0px 0px;
-  /* width: 100%; */
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top:10px;
-  padding-bottom: 5px;
-}
-
-.company-logo {
-  max-width: 280px;
-  align-items: center;
-}
-
-.card-front-middle {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 0px;
-}
-
-.card-front-middle-right {
-  margin-left: 10px;  
-}
-
-.card-front-middle-right > * {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.card-back {
-  background-color: #e74c3c;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.name {
-  font-size: 1.8rem;
-  font-weight: 300;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.name > i {
-  color: cyan;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.card-front-footer {
-  padding-top: 30px;
-  
-} 
-
-.card-front-footer-text {
-  margin: 0px;
-}
-
-.card-front-bottom-detail > * {
-  display: block;
-  text-align: right;
-  /* font-size: 1.2rem; */
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.business-card.clicked .card {
-  transform: rotateY(180deg);
-}
-
-/* Responsive styles for smartphones */
-@media (max-width: 600px) {
-  .business-card {
-    width: 100vw;
-    height: calc(100vw * 4 / 3);
-  }
-}
-</style>
-</head>
-<body>
-  <div class="business-card">
-    <div class="card">
-      <div class="card-front">
-        <div class="card-front-top">
-          <img class="company-logo" src="https://pick8chu.github.io/online-cv/assets/images/noa-ignite-logo.svg" alt="Company Image"/>
-        </div>
-        <div class="card-front-middle">
-          <img class="profile-picture" src="https://pick8chu.github.io/online-cv/assets/images/profile1.jpg" alt="Profile Picture">
-          <div class="card-front-middle-right">
-            <!-- <p class="position">Software Engineer</p> -->
-            <p class="detail-position">Senior Fullstack Developer</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="business-card">
+      <div class="card">
+        <div class="card-front">
+          <div class="card-front-top">
+            <img class="company-logo" src="https://pick8chu.github.io/online-cv/assets/images/noa-ignite-logo.svg" alt="Company Image"/>
+          </div>
+          <div class="card-front-middle">
+            <img class="profile-picture" src="https://pick8chu.github.io/online-cv/assets/images/profile1.jpg" alt="Profile Picture">
+            <div class="card-front-middle-right">
+              <!-- <p class="position">Software Engineer</p> -->
+              <p class="detail-position">Senior Fullstack Developer</p>
+            </div>
+          </div>
+          <div class="card-front-bottom">
+            <p class="name">Jong Wook <b>Ethan</b> Kim</p>
+            <div class="card-front-bottom-detail">
+              <p class="location">Copenhagen, Denmark 🏠</p>
+              <a href="mailto:ethan.jongwook.kim@gmail.com"
+                class="email">ethan.jongwook.kim@gmail.com ✉️</a>
+              <a href="tel:+4531474294"
+                class="phone">+45) 31 47 42 94 📞</a>
+              <div class="links">
+                <a href="https://www.pick8chu.github.io" target="_blank"
+                  class="linkedin">Blog 🔗</a>
+                <a href="https://www.pick8chu.github.io/online-cv" target="_blank"
+                  class="cv">CV 📃</a>
+                <a href="https://github.com/pick8chu" target="_blank"
+                  class="github">github <img class="icon" src="icons/github-mark.svg"></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-front-footer">
+            <p class="card-front-footer-text">Click for more details</p>
           </div>
         </div>
-        <div class="card-front-bottom">
-          <p class="name">Jong Wook <i>Ethan</i> Kim</p>
-          <div class="card-front-bottom-detail">
-            <p class="location">Copenhagen, Denmark 🏠</p>
-            <a href="mailto:ethan.jongwook.kim@gmail.com"
-              class="email">ethan.jongwook.kim@gmail.com ✉️</a>
-            <a href="tel:+4531474294"
-              class="phone">+45) 31 47 42 94 📞</a>
-          </div>
+        <div class="card-back">
+          <h2 class="section-title">
+            Experiences
+          </h2>
+          <section class="section experiences-section">
+            <div class="item">
+              <div class="meta">
+                <!-- <img class="company-img" src="https://pick8chu.github.io/online-cv/assets/images/noa-ignite-logo.svg" alt="company picture"> -->
+                <div class="expeience-header">
+                  <div class="company">NoA Ignite, Denmark</div>
+                  <div class="upper-row">
+                    <h3 class="job-title">Senior Fullstack Developer</h3>
+                    <div class="time">Aug 2023 - Present</div>
+                  </div>
+                  <!--//upper-row-->
+                </div>
+              </div>
+              <!--//meta-->
+              <div class="details">
+                <p>Senior fullstack developer</p>
+              </div>
+              <!--//details-->
+            </div>
+            <!--//item-->
+            <div class="item">
+              <div class="meta">
+                <!-- <img class="company-img" src="icons/issuu-logo.png" alt="company picture"> -->
+                <div class="expeience-header">
+                  <div class="company">ISSUU, Denmark</div>
+                  <div class="upper-row">
+                    <h3 class="job-title">Fullstack Developer</h3>
+                    <div class="time">Oct 2022 - Feb 2023</div>
+                  </div>
+                  <!--//upper-row-->
+                </div>
+              </div>
+              <!--//meta-->
+              <div class="details">
+                <p>Fullstack developer. React typescript, Node.js, OCaml. 
+                  Developing/maintaining reader side experiences.
+                </p>
+              </div>
+              <!--//details-->
+            </div>
+            <!--//item-->
+            <div class="item">
+              <div class="meta">
+                <!-- <img class="company-img" src="https://pick8chu.github.io/online-cv/assets/images/samsungsds.png" alt="company picture"> -->
+                <div class="expeience-header">
+                  <div class="company">Samsung SDS, South Korea</div>
+                  <div class="upper-row">
+                    <h3 class="job-title">Software Engineer</h3>
+                    <div class="time">Jul 2018 - Sep 2022</div>
+                  </div>
+                  <!--//upper-row-->
+                </div>
+              </div>
+              <!--//meta-->
+              <div class="details">
+                <p>Fullstack developer working on project-based B2B applications supporting Samsung initiatives- talent management, factory maintenance, security, etc.</p>
+              </div>
+            </div>
+            <!--//item-->
+          </section>
         </div>
-        <div class="card-front-footer">
-          <p class="card-front-footer-text">Click for more details</p>
-        </div>
-      </div>
-      <div class="card-back">
-        <h2>Contact Information</h2>
-        <p>Email: ethan.jongwook.kim@gmail.com</p>
-        <p>Phone: +45 31 47 42 94</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/jongwook-kim">jongwook-kim</a></p>
-        <p>Location: Copenhagen, Denmark</p>
-        <a href="https://www.linkedin.com/in/jong-wook-ethan-kim" target="_blank">
-          LinkedIn 🌐
-        </a>
       </div>
     </div>
-  </div>
-  <script>
-    // const businessCard = document.querySelector('.business-card');
-    // businessCard.addEventListener('click', () => {
-    //   businessCard.classList.toggle('clicked');
-    // });
-  </script>
-</body>
+    <script src="script.js" rel="script"></script>
+  </body>
 </html>
