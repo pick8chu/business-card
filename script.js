@@ -21,7 +21,14 @@ function handleMouseMove(event) {
   }
 }
 
-businessCard.addEventListener('click', (event) => {
+
+document.querySelectorAll('a').forEach(anchor => {
+  anchor.addEventListener('mousedown', (event) => {
+    event.stopPropagation();
+  });
+});
+
+businessCard.addEventListener('mouseup', (event) => {
   if (isDragging) {
     event.preventDefault(); // Prevent the click event during dragging
   } else {
